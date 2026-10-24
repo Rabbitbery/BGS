@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>জাতিসংঘ ও বাংলাদেশ – চ্যালেঞ্জ টেস্ট</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3f4fa;--cd:#fff;--tx:#1b1f2a;--mu:#646b7d;--bd:#dfe3ee;--pr:#5b4be0;--ok:#157a3d;--okb:#e3f6ea;--no:#b3261e;--nob:#fde8e6;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101219;--cd:#1b1e29;--tx:#eceef6;--mu:#9aa1b4;--bd:#31364a;--pr:#8f84ff;--ok:#5bd68a;--okb:#16301f;--no:#ff8a80;--nob:#3a1d1b}}
+:root[data-theme="dark"]{--bg:#101219;--cd:#1b1e29;--tx:#eceef6;--mu:#9aa1b4;--bd:#31364a;--pr:#8f84ff;--ok:#5bd68a;--okb:#16301f;--no:#ff8a80;--nob:#3a1d1b}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:"Noto Sans Bengali",system-ui,sans-serif;line-height:1.65}
+.w{max-width:680px;margin:0 auto;padding:14px}
+.hero{background:linear-gradient(135deg,#5b4be0,#e0488b);color:#fff;border-radius:22px;padding:28px 20px;box-shadow:0 8px 24px rgba(91,75,224,.3)}
+.hero h1{margin:6px 0;font-size:1.5rem}
+.hero p{margin:4px 0;opacity:.92}
+.chips{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:18px}
+.chip{background:rgba(255,255,255,.2);border-radius:14px;padding:10px 4px;text-align:center;font-size:.8rem}
+.chip b{display:block;font-size:1.25rem}
+.warn{margin:14px 2px;color:var(--mu);font-size:.92rem}
+button{font:inherit;font-weight:600;border:0;border-radius:14px;padding:14px 18px;cursor:pointer;background:var(--pr);color:#fff;width:100%;font-size:1rem;box-shadow:0 4px 14px rgba(91,75,224,.35)}
+button.g{background:var(--cd);color:var(--tx);border:1px solid var(--bd);box-shadow:none}
+button:disabled{opacity:.4;cursor:default}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);padding:8px 0 6px;z-index:5}
+.row{display:flex;justify-content:space-between;align-items:center;font-weight:600}
+#tm{background:var(--cd);border:1px solid var(--bd);border-radius:20px;padding:0 12px}
+.pb{height:6px;background:var(--bd);border-radius:6px;overflow:hidden;margin:6px 0}
+.pb i{display:block;height:100%;width:0;background:linear-gradient(90deg,#5b4be0,#e0488b);transition:width .3s}
+.dots{display:flex;gap:6px;overflow-x:auto;padding:4px 0}
+.dot{flex:none;width:30px;height:30px;border-radius:50%;border:1.5px solid var(--bd);background:var(--cd);color:var(--mu);font-size:.8rem;font-weight:600;display:flex;align-items:center;justify-content:center;cursor:pointer}
+.dot.d{background:color-mix(in srgb,var(--pr) 20%,transparent);color:var(--pr);border-color:var(--pr)}
+.dot.c{background:var(--pr);color:#fff;border-color:var(--pr)}
+.c{background:var(--cd);border:1px solid var(--bd);border-radius:18px;padding:16px;margin:12px 0;box-shadow:0 2px 12px rgba(20,30,60,.07)}
+.q{display:flex;gap:10px;font-weight:600;margin-bottom:12px;font-size:1.05rem}
+.n{flex:none;width:30px;height:30px;border-radius:50%;background:var(--pr);color:#fff;display:flex;align-items:center;justify-content:center;font-size:.85rem}
+.opt{display:flex;gap:10px;align-items:center;padding:12px;border:1.5px solid var(--bd);border-radius:14px;margin:8px 0;cursor:pointer;transition:.15s}
+.opt.s{border-color:var(--pr);background:color-mix(in srgb,var(--pr) 12%,transparent)}
+.lt{flex:none;width:28px;height:28px;border-radius:50%;border:1.5px solid var(--bd);display:flex;align-items:center;justify-content:center;font-size:.82rem;font-weight:600}
+.opt.s .lt{background:var(--pr);border-color:var(--pr);color:#fff}
+.nav{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.ring{width:160px;height:160px;border-radius:50%;margin:10px auto;display:flex;align-items:center;justify-content:center;background:conic-gradient(var(--pr) calc(var(--p)*1%),var(--bd) 0)}
+.ring>div{width:132px;height:132px;border-radius:50%;background:var(--cd);display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:700;font-size:2rem;line-height:1.2}
+.ring small{font-size:.8rem;color:var(--mu);font-weight:400}
+.msg{text-align:center;font-weight:700;font-size:1.25rem;margin:8px 0 14px}
+.st{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;text-align:center}
+.st div{border:1px solid var(--bd);border-radius:12px;padding:8px}
+.st .a b{color:var(--ok)}.st .b b{color:var(--no)}
+.o{padding:9px 11px;border-radius:10px;margin:6px 0;border:1px solid var(--bd)}
+.o.ok{background:var(--okb);border-color:var(--ok);color:var(--ok)}
+.o.no{background:var(--nob);border-color:var(--no);color:var(--no)}
+.tag{font-size:.82rem;font-weight:600}
+.hide{display:none}
+h2{margin:20px 2px 4px}
+
+/* Polished responsive refresh */
+:root{--pr2:#e0488b;--shadow:0 12px 32px rgba(28,25,70,.09)}
+body{background:radial-gradient(ellipse at top left,color-mix(in srgb,var(--pr) 9%,var(--bg)),transparent 42%),var(--bg);letter-spacing:-.01em}
+.w{max-width:760px;padding:clamp(12px,3vw,22px)}
+.hero{position:relative;overflow:hidden;border-radius:26px;padding:clamp(22px,5vw,34px);background:linear-gradient(135deg,#4736c9 0%,#7656e8 48%,#ed5795 100%);box-shadow:0 16px 36px rgba(91,75,224,.25)}
+.hero:after{content:"✦";position:absolute;right:18px;top:8px;font-size:5rem;line-height:1;color:#ffffff20;transform:rotate(12deg);pointer-events:none}
+.hero h1{font-size:clamp(1.45rem,5vw,2rem);line-height:1.35;letter-spacing:-.04em}
+.hero p{max-width:42ch}
+.chip{backdrop-filter:blur(8px);border:1px solid #ffffff35;transition:transform .2s,background .2s}
+.chip:hover{transform:translateY(-2px);background:#ffffff30}
+.warn{padding:12px 14px;border:1px solid color-mix(in srgb,var(--pr) 22%,var(--bd));border-radius:14px;background:color-mix(in srgb,var(--pr) 6%,var(--cd))}
+button{transition:transform .16s,filter .16s,box-shadow .16s;letter-spacing:-.01em}
+button:not(:disabled):hover{filter:brightness(1.05);transform:translateY(-1px);box-shadow:0 7px 18px rgba(91,75,224,.22)}
+button:not(:disabled):active{transform:scale(.985)}
+.bar{backdrop-filter:blur(14px);background:color-mix(in srgb,var(--bg) 88%,transparent);border-bottom:1px solid var(--bd);margin:0 -2px;padding:10px 2px;border-radius:0 0 14px 14px}
+#tm{font-variant-numeric:tabular-nums;font-weight:700;padding:4px 12px}
+.pb{height:8px}
+.dot{transition:transform .15s,background .15s}
+.dot:active{transform:scale(.92)}
+.c{border-radius:20px;padding:clamp(14px,3.5vw,22px);box-shadow:var(--shadow);transition:border-color .2s}
+.q{align-items:flex-start;line-height:1.55}
+.n{box-shadow:0 4px 10px color-mix(in srgb,var(--pr) 22%,transparent)}
+.opt{background:color-mix(in srgb,var(--cd) 92%,var(--bg));line-height:1.5;min-height:52px;transition:transform .15s,border-color .15s,background .15s}
+.opt:hover{border-color:var(--pr);transform:translateX(2px)}
+.opt.s{box-shadow:0 0 0 2px color-mix(in srgb,var(--pr) 10%,transparent)}
+.nav{margin-top:12px}
+.ring{filter:drop-shadow(0 8px 14px rgba(91,75,224,.12))}
+.msg{padding:14px 12px;border-radius:16px;background:color-mix(in srgb,var(--pr) 8%,var(--cd));border:1px solid color-mix(in srgb,var(--pr) 20%,var(--bd));line-height:1.6}
+.st div{background:var(--cd);padding:12px 6px}
+.o{line-height:1.55;padding:11px 12px}
+.o .tag{display:inline-block;margin-left:4px}
+h2{font-size:1.2rem;letter-spacing:-.02em}
+@media(max-width:420px){.w{padding:10px}.chips{gap:6px}.chip{padding:9px 2px;font-size:.74rem}.chip b{font-size:1.15rem}.c{margin:10px 0}.opt{padding:11px}.nav{gap:8px}.ring{width:148px;height:148px}.ring>div{width:122px;height:122px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
+
+</style>
+</head>
+<body>
+<div class="w">
+<div id="start">
+<div class="hero"><div>📚 বাংলাদেশ ও বিশ্বপরিচয় · নবম অধ্যায়</div><h1>জাতিসংঘ ও বাংলাদেশ<br>চ্যালেঞ্জ টেস্ট</h1><p>দেখি তোর ঘটে কতটুকু বিদ্যা আছে!</p>
+<div class="chips"><div class="chip"><b>২০</b>প্রশ্ন</div><div class="chip"><b>+১</b>সঠিক</div><div class="chip"><b>−০.২৫</b>ভুল</div></div></div>
+<p class="warn">⚠️ সাবধান: ১৮-এর নিচে গেলেই শুরু হবে বাংলা স্ল্যাং-সহ রোস্ট! সবই মজার ছলে—তাই পড়ে এসে নিজের মান বাঁচাস, বস। 😈</p>
+<button onclick="begin()">দেখি কত পারিস 🔥</button>
+</div>
+<div id="exam" class="hide">
+<div class="bar"><div class="row"><span id="prog"></span><span id="tm">০০:০০</span></div><div class="pb"><i id="pf"></i></div><div class="dots" id="dots"></div></div>
+<div id="qc"></div>
+<div class="nav"><button class="g" id="pv" onclick="go(-1)">← আগের</button><button id="nx" onclick="go(1)">পরের →</button></div>
+<button class="g" id="sb" onclick="submitExam()" style="margin-top:10px">এখনই জমা দাও ✅</button>
+</div>
+<div id="res" class="hide"></div>
+</div>
+<script>
+var Q=[
+["জাতিসংঘ গঠনের পেছনে প্রধান কারণ কী ছিল?",["অর্থনৈতিক মন্দা","ঠান্ডা যুদ্ধ","ঔপনিবেশিক শাসন","দুই বিশ্বযুদ্ধের ধ্বংসযজ্ঞ"],3],
+["দ্বিতীয় বিশ্বযুদ্ধ কত সালে শুরু হয়?",["১৯১৪","১৯৪৫","১৯৩৯","১৯২০"],2],
+["জাতিসংঘ গঠনের সিদ্ধান্ত নিতে ১৯৪৩ সালে ৪টি প্রধান শক্তির সম্মেলন কোথায় অনুষ্ঠিত হয়?",["তেহরান ও মস্কো","ইয়াল্টা","ভার্সাই","জেনেভা"],0],
+["জাতিসংঘের সদর দপ্তর কোন শহরে অবস্থিত?",["জেনেভা","প্যারিস","হেগ","নিউইয়র্ক"],3],
+["জাতিসংঘের প্রধান নির্বাহী কে?",["সাধারণ পরিষদের সভাপতি","প্রধান বিচারপতি","মহাসচিব","নিরাপত্তা পরিষদের সভাপতি"],2],
+["২০২৪ সালে জাতিসংঘের সদস্য সংখ্যা কত?",["১৯১","১৯৩","১৯২","১৯৫"],1],
+["নিরাপত্তা পরিষদে মোট ১৫ জন সদস্যের মধ্যে অস্থায়ী সদস্য কতজন?",["৫","৭","১০","১২"],2],
+["কোনটি জাতিসংঘের পাঁচটি প্রধান অঙ্গের একটি নয়?",["সাধারণ পরিষদ","অছি পরিষদ","আন্তর্জাতিক বিচারালয়","ইউনিসেফ"],3],
+["জাতিসংঘের উদ্দেশ্য কোনগুলো?<br>i. আন্তর্জাতিক বিরোধের শান্তিপূর্ণ সমাধান<br>ii. প্রত্যেক জাতির আত্মনিয়ন্ত্রণ অধিকার সমুন্নত রাখা<br>iii. সদস্য দেশের অভ্যন্তরীণ বিষয়ে সামরিক হস্তক্ষেপ",["i ও ii","i ও iii","ii ও iii","i, ii ও iii"],0],
+["বাংলাদেশ জাতিসংঘ সাধারণ পরিষদের কততম অধিবেশনে প্রথম বক্তৃতা করে (১৯৭৫)?",["২৯তম","৩০তম","৩১তম","৪১তম"],1],
+["১৯৮৮ থেকে ২০১৫ পর্যন্ত জাতিসংঘ শান্তি মিশনে বাংলাদেশের মোট শান্তিরক্ষী প্রায় কত?",["প্রায় ৯৪ হাজার","প্রায় ২ লক্ষ","প্রায় ১ লক্ষ ৪৪ হাজার","প্রায় ৪৪ হাজার"],2],
+["কোন দেশে বাংলা ভাষা দ্বিতীয় রাষ্ট্রভাষার মর্যাদা পেয়েছে?",["মালি","আইভরি কোস্ট","নামিবিয়া","সিয়েরা লিওন"],3],
+["শান্তিরক্ষা মিশনে পাঠ্যবই অনুযায়ী মোট কতজন বাংলাদেশি সেনা শহীদ হয়েছেন?",["৬৩ জন","১৪৪ জন","১৬৮ জন","৪৩ জন"],2],
+["বাংলাদেশের বিশাল জনগোষ্ঠীর খাদ্য নিশ্চিত করতে কাজ করছে—",["ইউনেস্কো","এফএও","ডব্লিউএইচও","ইউএনএফপিএ"],1],
+["সিডও সনদে মোট কয়টি ধারা আছে?",["২০টি","৩০টি","৪০টি","১৬টি"],1],
+["দ্বিতীয় বিশ্ব নারী সম্মেলন কোথায় অনুষ্ঠিত হয় (১৯৮০)?",["নাইরোবি","মেক্সিকো","কোপেনহেগেন","বেইজিং"],2],
+["১৯৯২ সালে রিও সম্মেলনে নারীর কোন ভূমিকার স্বীকৃতি দেওয়া হয়?",["রাজনৈতিক ক্ষমতায়ন","শিক্ষা","কর্মসংস্থান","পরিবেশ সংরক্ষণ ও ব্যবস্থাপনা"],3],
+["১৯৯৫ সালের বেইজিং সম্মেলনের ঘোষণা কী ছিল?",["নারী ও শান্তি","নারী, উন্নয়ন, সমতা","নারী চোখে বিশ্ব দেখুন","সবার জন্য শিক্ষা"],2],
+["কাউকে পিছিয়ে রেখে অন্যেরা এগিয়ে গেলে সেই উন্নয়ন—",["দ্রুততর হয়","জাতীয় ও বৈশ্বিকভাবে টেকসই হয় না","সবার জন্য সমান হয়","অর্থনীতিকে শক্তিশালী করে"],1],
+["বাংলাদেশের টেকসই উন্নয়নের পথে চ্যালেঞ্জ কোনগুলো?<br>i. আয় ও সম্পদ বৈষম্য বৃদ্ধি<br>ii. জলবায়ু পরিবর্তনের প্রভাব<br>iii. শিশু মৃত্যুহার হ্রাস",["i ও iii","ii ও iii","i ও ii","i, ii ও iii"],2]
+];
+var M={
+ n:["নেগেটিভ নম্বর! 😂 ভাই, পরীক্ষা দিছিস নাকি নম্বর ধার দিয়ে আসছিস?","স্কোর মাইনাসে! খাতা দেখে পরীক্ষকও বলছে—‘এটা আবার কোন নতুন সিলেবাস?’ 💀"],
+ a:["এত কম?! বইটা কি শুধু টেবিল সাজানোর কাজে লাগাস, নাকি? 📚","ওস্তাদ, পড়ার সঙ্গে তোর সম্পর্কটা মনে হয় ব্লক-আনব্লক পর্যায়ে আছে! 🤡","এই স্কোর দেখে ক্যালকুলেটরও বলছে—‘আমারে এসবের মধ্যে জড়াস না!’ 😭","ভাই, তুই প্রশ্ন পড়েছিস, নাকি প্রশ্ন তোকে পড়ে ফেলেছে?"],
+ b:["আরে ভাই, অর্ধেকও হলো না! বইয়ের সঙ্গে পরিচয়টা একটু সিরিয়াস কর। 😭","কী মুশকিল! আত্মবিশ্বাস ১০০, নম্বরের অবস্থা লো ব্যাটারি! 🔋","এই পারফরম্যান্স দেখে ভুল উত্তরগুলোও একে অন্যকে সান্ত্বনা দিচ্ছে। 😂","বস, আন্দাজে টিক মারারও একটা আর্ট আছে—তুই সেটা এখনো আবিষ্কার করিসনি!"],
+ c:["মোটামুটি, কিন্তু ‘মোটামুটি’ দিয়ে তো আর যুদ্ধ জেতা যায় না, ভাই! 😏","না একেবারে লেজেগোবরে, না একেবারে বাহাদুর—মাঝখানে ঝুলে আছিস!","তোর প্রস্তুতি দেখে মনে হচ্ছে পড়তে বসেছিলি, তারপর চেয়ারের সঙ্গে গভীর বন্ধুত্ব হয়ে গেছে। 🪑","এই নম্বর বলে: চেষ্টা আছে, কিন্তু ফোকাসটা মনে হয় ছুটিতে গেছে!"],
+ d:["উফফ, ১৮-এর দরজায় গিয়ে নক করেও ঢুকতে পারলি না! 😭","আর একটু হলেই হিরো, এখনো ট্রেলারেই আটকে আছিস ভাই! 🎬","১৮ থেকে অল্প দূরে—এইবার বই খুলে বস, বাহানা পরে দিস!","কাছাকাছি গিয়েও মিস! তোর নম্বরের সঙ্গে শেষ মুহূর্তের ব্রেকআপ হয়ে গেল। 💔"],
+ e:["ওস্তাদ! ১৮+—আজকে তোরে খোঁচা দেওয়ার মতো মালমশলা পেলাম না! 🏆","বাহ! আজ বইয়ের সঙ্গে তোর সম্পর্কটা বেশ জমেছে। চালিয়ে যা! 🔥","এই তো বস! নম্বর দেখে মনে হচ্ছে পড়াশোনাও মাঝে মাঝে করিস! 😎","দুর্দান্ত! আজকের জন্য ট্রোল থেকে ছাড়—কিন্তু পরের পরীক্ষায় আবার দেখা হবে! 🎉"]
+};
+var L=["ক","খ","গ","ঘ"],A=[],cur=0,t0,iv;
+function bn(n){return String(n).replace(/\d/g,function(d){return "০১২৩৪৫৬৭৮৯"[d]})}
+function $(i){return document.getElementById(i)}
+function begin(){
+A=Q.map(function(){return -1});cur=0;
+$("start").className="hide";$("exam").className="";$("res").className="hide";
+t0=Date.now();clearInterval(iv);
+iv=setInterval(function(){var s=Math.floor((Date.now()-t0)/1000);$("tm").textContent=bn(("0"+Math.floor(s/60)).slice(-2)+":"+("0"+s%60).slice(-2))},1000);
+show()}
+function show(){
+var q=Q[cur],h='<div class="c"><div class="q"><span class="n">'+bn(cur+1)+'</span><div>'+q[0]+'</div></div>';
+q[1].forEach(function(o,j){h+='<div class="opt'+(A[cur]==j?" s":"")+'" onclick="pick('+j+')"><span class="lt">'+L[j]+'</span><span>'+o+'</span></div>'});
+$("qc").innerHTML=h+'</div>';
+var d="";Q.forEach(function(_,i){d+='<div class="dot'+(i==cur?" c":A[i]>=0?" d":"")+'" onclick="cur='+i+';show()">'+bn(i+1)+'</div>'});
+$("dots").innerHTML=d;
+var n=A.filter(function(a){return a>=0}).length;
+$("prog").textContent=bn(n)+"/২০ উত্তর দেওয়া হয়েছে";$("pf").style.width=n*5+"%";
+$("pv").disabled=cur==0;$("sb").disabled=n<1;$("nx").textContent=cur==19?"জমা দাও ✅":"পরের →";
+var c=$("dots").children[cur];if(c)c.scrollIntoView({block:"nearest",inline:"center"});
+window.scrollTo(0,0)}
+function pick(j){A[cur]=j;show()}
+function go(d){if(d>0&&cur==19){submitExam();return}cur=Math.max(0,Math.min(19,cur+d));show()}
+function submitExam(){
+var un=A.filter(function(a){return a<0}).length;
+if(un&&!confirm(bn(un)+"টি প্রশ্নের উত্তর দেওয়া হয়নি। তবুও জমা দেবে?"))return;
+clearInterval(iv);
+var c=0,w=0,s=0,h="";
+Q.forEach(function(q,i){
+var a=A[i];if(a<0)s++;else if(a==q[2])c++;else w++;
+h+='<div class="c"><div class="q"><span class="n">'+bn(i+1)+'</span><div>'+q[0]+'</div></div>';
+q[1].forEach(function(o,j){
+var cl="o",tg="";
+if(j==q[2]){cl+=" ok";tg=j==a?" ✓ তোমার উত্তর (সঠিক)":" ✓ সঠিক উত্তর"}
+else if(j==a){cl+=" no";tg=" ✗ তোমার উত্তর"}
+h+='<div class="'+cl+'">'+L[j]+'. '+o+'<span class="tag">'+tg+'</span></div>'});
+if(a<0)h+='<div style="color:var(--mu)">উত্তর দেওয়া হয়নি</div>';
+h+='</div>'});
+var m=c-0.25*w,ms=bn(m.toFixed(2).replace(/\.?0+$/,"")),k=m<0?"n":m<5?"a":m<10?"b":m<14?"c":m<18?"d":"e",l=M[k];
+$("res").innerHTML='<div class="c"><div class="ring" style="--p:'+Math.max(0,m*5)+'"><div>'+ms+'<small>/ ২০</small></div></div><p class="msg">'+l[Math.floor(Math.random()*l.length)]+'</p><div class="st"><div class="a">সঠিক<br><b>'+bn(c)+'</b></div><div class="b">ভুল<br><b>'+bn(w)+'</b></div><div>বাদ<br><b>'+bn(s)+'</b></div></div><p style="text-align:center;color:var(--mu)">'+bn(c)+' × ১ − '+bn(w)+' × ০.২৫ = '+ms+'</p><button onclick="begin()">আবার পরীক্ষা দাও 🔁</button></div><h2>উত্তরমালা</h2>'+h;
+$("exam").className="hide";$("res").className="";window.scrollTo(0,0)}
+</script>
+</body>
+</html>
